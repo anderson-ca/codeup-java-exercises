@@ -3,13 +3,39 @@ import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        /////////////////////////////////////////////
+        /////////////////////////////////////////////
+        /////////////////////////////////////////////
+        int numA = 0;
 
-        int i = 5;
+        do {
+            numA += 2;
 
-        while(i <= 15) {
-            System.out.println(i);
-            i++;
+            System.out.println(numA);
+        } while(numA < 100);
 
-        }
+        /////////////////////////////////////////////
+        /////////////////////////////////////////////
+        /////////////////////////////////////////////
+        int numB = 100;
+
+        do {
+            numB -= 5;
+
+            System.out.println(numB);
+        } while(numB > -10);
+
+        /////////////////////////////////////////////
+        /////////////////////////////////////////////
+        /////////////////////////////////////////////
+        int num = 2;
+
+        do {
+
+            num = num * num;
+
+            System.out.println(num);
+
+        } while (num < 65536);
     }
 }
