@@ -23,7 +23,13 @@ public class ControlFlowExercises {
             numB -= 5;
 
             System.out.println(numB);
+
         } while(numB > -10);
+
+        ///////////////////////////////////////////////
+        for(int i = 100; i > -10; i -= 5) {
+            System.out.println(i);
+        }
 
         /////////////////////////////////////////////
         /////////////////////////////////////////////
@@ -37,5 +43,12 @@ public class ControlFlowExercises {
             System.out.println(num);
 
         } while (num < 65536);
+
+
+        /////////////////////////////////////////////////
+        for(int num = 2; num < 65536; num = num * num) {
+            System.out.println(num);
+        }
+
     }
 }
