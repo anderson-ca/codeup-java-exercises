@@ -6,31 +6,20 @@ public class ControlFlowExercises {
         /////////////////////////////////////////////
         /////////////////////////////////////////////
         /////////////////////////////////////////////
-        System.out.println("Enter integer: ");
+        System.out.println("Enter your grade: ");
 
-        int num = input.nextInt();
+        int grade = input.nextInt();
 
-        int cubed;
-
-        int squared;
-
-        int test = 0;
-        System.out.println("number  |   square  | cube");
-        System.out.println("---------------------------");
-        for (int i = 0; i <= num; i++) {
-
-            squared = i * i;
-
-            cubed = i * i * i;
-
-            System.out.println();
-
-            System.out.printf("%-5s", i);
-
-            System.out.printf("%5s", squared);
-
-            System.out.printf("%10s", cubed);
-
+        if(grade < 50) {
+            System.out.println("F");
+        } else if(grade <= 69) {
+            System.out.println("D");
+        } else if(grade <= 79) {
+            System.out.println("C");
+        } else if(grade <= 89) {
+            System.out.println("B");
+        } else if(grade >= 90) {
+            System.out.println("A");
         }
 
     }
