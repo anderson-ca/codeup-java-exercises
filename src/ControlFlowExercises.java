@@ -4,7 +4,7 @@ public class ControlFlowExercises {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         /////////////////////////////////////////////
-        /////////////////////////////////////////////
+        ///////////// grades exercise ///////////////
         /////////////////////////////////////////////
         System.out.println("Enter your grade: ");
 
