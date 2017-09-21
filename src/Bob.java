@@ -6,13 +6,13 @@ public class Bob {
 
         System.out.println("Talk to Bob: ");
 
-        String convo = input.nextLine();
+        String conversation = input.nextLine();
 
-        if(convo.endsWith("?")) {
+        if(conversation.endsWith("?")) {
             System.out.println("Sure.");
-        } else if (convo.endsWith("!")) {
+        } else if (conversation.endsWith("!")) {
             System.out.println("Whoa! chill, out!");
-        } else if(convo.equals("")) {
+        } else if(conversation.equals("")) {
             System.out.println("Fine, be that way.");
         } else {
             System.out.println("Whatever.");
