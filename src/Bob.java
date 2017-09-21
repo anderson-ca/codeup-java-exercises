@@ -10,9 +10,9 @@ public class Bob {
 
         if(conversation.endsWith("?")) {
             System.out.println("Sure.");
-        } else if (conversation.endsWith("!")) {
+        } else if (conversation.endsWith("!") || conversation.equals(conversation.toUpperCase())) {
             System.out.println("Whoa! chill, out!");
-        } else if(conversation.equals("")) {
+        } else if(conversation.isEmpty()) {
             System.out.println("Fine, be that way.");
         } else {
             System.out.println("Whatever.");
