@@ -4,18 +4,32 @@ public class Bob {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Talk to Bob: ");
+        while (true) {
 
-        String conversation = input.nextLine();
+            System.out.println("Talk to Bob: ");
 
-        if(conversation.endsWith("?")) {
-            System.out.println("Sure.");
-        } else if (conversation.endsWith("!") || conversation.equals(conversation.toUpperCase())) {
-            System.out.println("Whoa! chill, out!");
-        } else if(conversation.isEmpty()) {
-            System.out.println("Fine, be that way.");
-        } else {
-            System.out.println("Whatever.");
+            String conversation = input.nextLine();
+
+            if (conversation.endsWith("?")) {
+                System.out.println("Sure.");
+            } else if ((conversation.endsWith("!") || conversation.equals(conversation.toUpperCase())) && !conversation.isEmpty()) {
+                System.out.println("Whoa! chill, out!");
+            } else if (conversation.isEmpty()) {
+                System.out.println("Fine, be that way.");
+            } else {
+                System.out.println("Whatever.");
+            }
+
+            System.out.println("Continue conversation? y/n");
+
+            String option = input.nextLine();
+
+            if (!option.equalsIgnoreCase("y")) {
+                System.out.println("Conversation terminated");
+                break;
+            }
+
         }
     }
+
 }
