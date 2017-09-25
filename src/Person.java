@@ -2,7 +2,7 @@ public class Person {
     private String name;
 
     // Constructor function initializing name property in Person class.
-    public void Person(String personName) {
+    public Person(String personName) {
         name = personName;
     }
 
@@ -17,7 +17,7 @@ public class Person {
     }
 
     // Prints console message saying hello.
-    public void sayHello() {
-        System.out.println("Hello, " + name);
+    public String sayHello() {
+        return "Hello, " + name + ".";
     }
 }
