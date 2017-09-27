@@ -2,6 +2,7 @@ package util;
 
 public class InputTest {
     public static void main(String[] args) {
+
         Input userInput = new Input();
 
         ////// get name.
@@ -9,7 +10,7 @@ public class InputTest {
 
         String name = userInput.getString();
 
-        System.out.println(name);
+        System.out.println("Hello, " + name);
 
         ////// get age.
         System.out.println("Enter age: ");
@@ -26,9 +27,15 @@ public class InputTest {
         System.out.println(userBool);
 
         /////// Check if number is within specified range.
+
+        System.out.println("Enter number between 1 and 10: ");
+
         userInput.getInt(1, 10);
 
         /////// Check if Double is within specified range.
+
+        System.out.println("Enter number between 1 and 10: ");
+
         userInput.getDouble(1.0,10.0);
 
         /////// Get double from user.

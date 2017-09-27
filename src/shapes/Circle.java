@@ -4,8 +4,9 @@ public class Circle {
     private double radius;
     double pi = Math.PI;
 
-    // Constructor setting the claue for radius.
+    // Constructor setting the class for radius.
     public Circle(double radius) {
+
         this.radius = radius;
     }
 

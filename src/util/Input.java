@@ -3,64 +3,95 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scanner = new Scanner(System.in);
 
+    private Scanner scanner;
+
+    public Input() {
+
+        scanner = new Scanner(System.in);
+    }
 
     /////////////////// Return some string.
     public String getString() {
+
         return scanner.nextLine();
     }
 
     ////////////////// Return true or false.
     public boolean yesNo() {
-        boolean confirmation;
+
         String confirm = scanner.next();
 
-        if (confirm.equalsIgnoreCase("yes") || confirm.equalsIgnoreCase("y") || confirm.equalsIgnoreCase("si")) {
-            confirmation = true;
+        return confirm.equalsIgnoreCase("y") || confirm.equalsIgnoreCase("yes");
 
-        } else {
-
-            confirmation = false;
-
-        }
-
-        return confirmation;
     }
 
     ////////////////// Check integer for min and max.
     public int getInt(int min, int max) {
-        System.out.println("Enter a number between " + min + " and " + max + ": ");
 
-        int userNum = scanner.nextInt();
+        int userNum = getInt();
 
         if (userNum < min || userNum > max) {
+
+            System.out.println("Enter a number between " + min + " and " + max + ": ");
+
             return getInt(min, max);
-        } else {
-            return userNum;
+
         }
+
+        return userNum;
+
     }
 
     ////////////////// Get integer from user.
     public int getInt() {
-        return scanner.nextInt();
-    }
+        if (this.scanner.hasNextInt()) {
 
-    ////////////////// Check if input is within min and max parameter.
-    public double getDouble(double min, double max) {
-        System.out.println("Enter a number between " + min + " and " + max + ": ");
+            return scanner.nextInt();
 
-        double userDouble = scanner.nextDouble();
-
-        if (userDouble < min || userDouble > max) {
-            return getDouble(min, max);
         } else {
-            return userDouble;
+
+            System.out.println("Invalid Input!");
+
+            scanner.nextLine();
+
+            return getInt();
         }
     }
 
-    ///////////////// Get double from user.
+    ////////////////// Check double for min and max.
+    public double getDouble(double min, double max) {
+
+        double userNum = getDouble();
+
+        if (userNum < min || userNum > max) {
+
+            System.out.println("Enter a number between " + min + " and " + max + ": ");
+
+            scanner.nextLine();
+
+            return getDouble(min, max);
+        }
+
+        return userNum;
+
+    }
+
+    ////////////////// Get double from user.
     public double getDouble() {
-        return scanner.nextDouble();
+
+        if (this.scanner.hasNextDouble()) {
+
+            return scanner.nextDouble();
+
+        } else {
+
+            System.out.println("Invalid Input!");
+
+            scanner.nextLine();
+
+            return getDouble();
+
+        }
     }
 }
