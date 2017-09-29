@@ -1,30 +1,102 @@
 package shapes;
 
-public class Square extends Rectangle {
+public class Square extends Quadrilateral {
 
-
-    //////////// Constructor.
-    public Square(float side) {
+    public Square(double side) {
 
         super(side, side);
 
     }
 
-    //////////// Getters
-    public float getArea() {
-
-        float area = (4 * super.getWidth());
-
-        return area;
-
+    /////////////////////////////// Abstract Methods ////////////////////////////////////
+    @Override
+    public void setLength(double length) {
+        this.length = length;
     }
 
-    public float getPerimeter() {
+    @Override
+    public void setWidth(double width) {
+        this.width = length;
+    }
 
-        float perimeter = super.getWidth() * super.getWidth();
+    @Override
+    public double getPerimeter() {
+        double perimeter = (4 * this.width);
 
         return perimeter;
-
     }
 
+    @Override
+    public double getArea() {
+        double area = (this.length * this.width);
+
+        return  area;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    //////////// Constructor.
+//    public Square(float side) {
+//
+//        super(side, side);
+//
+//    }
+//
+//    //////////// Getters
+//    public float getArea() {
+//
+//        float area = super.getWidth() * super.getWidth();
+//
+//        return area;
+//
+//    }
+//
+//    public float getPerimeter() {
+//
+//        float perimeter = (4 * super.getWidth());
+//
+//        return perimeter;
+//
+//    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
