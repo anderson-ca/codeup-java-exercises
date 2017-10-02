@@ -10,27 +10,35 @@ public class Square extends Quadrilateral {
 
     /////////////////////////////// Abstract Methods ////////////////////////////////////
     @Override
-    public void setLength(double length) {
-        this.length = length;
+    public void setLength(double side) {
+
+        this.length = side;
+
     }
 
     @Override
     public void setWidth(double width) {
-        this.width = length;
+
+        this.width = this.length;
+
     }
 
     @Override
     public double getPerimeter() {
+
         double perimeter = (4 * this.width);
 
         return perimeter;
+
     }
 
     @Override
     public double getArea() {
+
         double area = (this.length * this.width);
 
         return  area;
+
     }
 }
 

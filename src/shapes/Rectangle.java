@@ -14,13 +14,16 @@ public class Rectangle extends Quadrilateral {
     ////////////////////////// Abstract Methods /////////////////////////////
     @Override // Notation used to give me an error in case this method doesn't exist else where. Because this method should exist somewhere in the body of the super class. And I wish to overwrite the method contained in the super class.
     public void setLength(double length) {
+
         this.length = length;
 
     }
 
     @Override
     public void setWidth(double width) {
+
         this.width=width;
+
     }
 
     @Override
@@ -35,7 +38,7 @@ public class Rectangle extends Quadrilateral {
     @Override
     public double getArea() {
 
-        double area = (length * width);
+        double area = (this.length * this.width);
 
         return area;
 

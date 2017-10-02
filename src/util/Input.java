@@ -17,6 +17,12 @@ public class Input {
         return scanner.nextLine();
     }
 
+    /////////////////// Return next string
+    public String getNextString() {
+
+        return scanner.next();
+    }
+
     ////////////////// Return true or false.
     public boolean yesNo() {
 

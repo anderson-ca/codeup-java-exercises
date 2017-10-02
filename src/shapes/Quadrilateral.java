@@ -1,6 +1,6 @@
 package shapes;
 //My super class is abstract because its concepts bleeds into the sub-classes.
-abstract public class Quadrilateral extends Shape implements Measurable {
+abstract public class Quadrilateral implements Measurable {
 
     ///////////// Properties. ///////////////////////
     protected double length;
